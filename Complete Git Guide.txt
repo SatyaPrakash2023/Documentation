@@ -1,0 +1,271 @@
+**Complete Git Guide (Zero to Pro)**
+
+## **Introduction to Git**
+Git is a distributed version control system used to track changes in source code during software development. It allows multiple developers to work on the same project efficiently.
+
+### **Why Use Git?**
+- Tracks changes and maintains history.
+- Enables collaboration in teams.
+- Supports branching and merging.
+- Works with remote repositories like GitHub, GitLab, and Bitbucket.
+
+---
+
+## **Git Installation**
+To install Git, visit: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+
+Verify installation:
+```bash
+git --version
+```
+
+---
+
+## **Basic Git Commands**
+
+### **1. Configuration Commands**
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+git config --global core.editor "code --wait" # Set default editor
+```
+
+Check current configuration:
+```bash
+git config --list
+```
+
+---
+
+### **2. Initialize a Git Repository**
+```bash
+git init
+```
+This initializes a new Git repository in the current directory.
+
+---
+
+### **3. Clone a Repository**
+```bash
+git clone <repository-url>
+```
+Example:
+```bash
+git clone https://github.com/user/repo.git
+```
+
+---
+
+### **4. Check Repository Status**
+```bash
+git status
+```
+Shows the status of the working directory and staged changes.
+
+---
+
+### **5. Staging and Committing Changes**
+```bash
+git add <file>
+```
+Stage a specific file.
+```bash
+git add .
+```
+Stage all changes.
+
+```bash
+git commit -m "Commit message"
+```
+Commit staged changes with a message.
+
+---
+
+### **6. Viewing Commit History**
+```bash
+git log
+```
+Shows commit history.
+```bash
+git log --oneline --graph
+```
+Displays a compact commit history with a graphical representation.
+
+---
+
+### **7. Branching in Git**
+```bash
+git branch
+```
+List all local branches.
+```bash
+git branch <new-branch>
+```
+Create a new branch.
+```bash
+git checkout <branch-name>
+```
+Switch to another branch.
+```bash
+git checkout -b <new-branch>
+```
+Create and switch to a new branch.
+```bash
+git branch -r
+```
+List all remote branches.
+```bash
+git branch -a
+```
+List all local and remote branches.
+```bash
+git branch --show-current
+```
+Show the current branch name.
+
+---
+
+### **8. Merging Branches**
+```bash
+git merge <branch-name>
+```
+Merges the specified branch into the current branch.
+
+---
+
+### **9. Rebasing a Branch**
+```bash
+git rebase <branch-name>
+```
+Reapply commits on top of another base branch.
+```bash
+git rebase -i HEAD~3
+```
+Squash the last three commits into one.
+
+---
+
+### **10. Deleting a Branch**
+```bash
+git branch -d <branch-name>
+```
+Delete a local branch.
+```bash
+git push origin --delete <branch-name>
+```
+Delete a remote branch.
+
+---
+
+### **11. Fetching and Pulling Changes**
+```bash
+git fetch
+```
+Fetches changes from the remote repository but does not merge them.
+```bash
+git pull origin <branch-name>
+```
+Fetches and merges changes from the remote branch.
+
+---
+
+### **12. Pushing Changes to Remote Repository**
+```bash
+git push origin <branch-name>
+```
+Push local changes to the remote repository.
+```bash
+git push -u origin <branch-name>
+```
+Push a new branch to the remote repository and set it to track.
+
+---
+
+### **13. Resetting and Reverting Changes**
+```bash
+git reset --soft HEAD~1
+```
+Undo the last commit but keep changes staged.
+```bash
+git reset --hard HEAD~1
+```
+Undo the last commit and discard all changes.
+```bash
+git revert <commit-hash>
+```
+Revert a specific commit without deleting history.
+
+---
+
+### **14. Stashing Changes**
+```bash
+git stash
+```
+Saves current changes temporarily without committing.
+```bash
+git stash pop
+```
+Applies the latest stashed changes and removes them from the stash list.
+```bash
+git stash list
+```
+Displays all stashed changes.
+
+---
+
+### **15. Finding a Commit that Introduced a Bug**
+```bash
+git bisect start
+git bisect bad
+git bisect good <commit-hash>
+```
+Helps identify the commit that introduced an issue.
+
+---
+
+### **16. Renaming a Branch**
+```bash
+git branch -m old-branch-name new-branch-name
+```
+Renames a local branch.
+
+---
+
+### **17. Checking Differences Between Commits**
+```bash
+git diff
+```
+Shows differences between working directory and staged files.
+```bash
+git diff <commit-hash> <commit-hash>
+```
+Shows differences between two commits.
+
+---
+
+### **18. Restoring a Deleted File**
+```bash
+git checkout -- <file>
+```
+Restores a deleted file if it was previously committed.
+
+---
+
+### **19. Git Hooks**
+```bash
+cd .git/hooks
+```
+Example: Creating a pre-commit hook to check for syntax errors.
+```bash
+echo "#!/bin/sh
+eslint ." > .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+```
+
+---
+
+## **Conclusion**
+Git is an essential tool for version control, enabling efficient collaboration and project management. Mastering these commands will help streamline your development workflow.
+
+This guide provides all the necessary Git commands and explanations to help you become proficient in Git. 🚀
+
