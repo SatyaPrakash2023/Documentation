@@ -1,0 +1,180 @@
+**Spring Framework Complete Guide (Zero to Pro)**
+
+## **Introduction to Spring Framework**
+Spring Framework is an open-source, lightweight framework for building enterprise applications in Java. It provides comprehensive support for developing Java applications with features such as dependency injection (DI), aspect-oriented programming (AOP), and transaction management.
+
+### **Key Features of Spring Framework**
+- **Dependency Injection (DI):** Reduces tight coupling between components.
+- **Aspect-Oriented Programming (AOP):** Helps in separating cross-cutting concerns like logging, security, and transactions.
+- **Spring MVC:** Provides a powerful Model-View-Controller architecture for web applications.
+- **Spring Boot:** Simplifies Java development with auto-configuration and embedded servers.
+- **Spring Security:** Provides authentication and authorization features.
+- **Spring Data:** Simplifies database access using JPA and other technologies.
+- **Spring Cloud:** Supports microservices development with distributed system capabilities.
+
+---
+
+## **History of Spring Framework**
+- **2002:** Created by Rod Johnson and released as part of his book "Expert One-on-One J2EE Design and Development."
+- **2004:** First official version of the Spring Framework released.
+- **2014:** Spring Boot introduced for rapid application development.
+- **2017-Present:** Spring 5 and 6 introduced, providing reactive programming support and native cloud capabilities.
+
+---
+
+## **Why Use Spring Framework?**
+Spring Framework is widely used because:
+- It simplifies Java enterprise application development.
+- It provides powerful integrations with various technologies like Hibernate, JPA, and Kafka.
+- It supports microservices architecture with Spring Boot and Spring Cloud.
+- It reduces boilerplate code with dependency injection and annotations.
+
+### **Comparison with Other Frameworks**
+| Feature      | Spring | Java EE | Struts | Play Framework |
+|-------------|--------|---------|--------|----------------|
+| Performance | High   | Moderate | High   | Very High |
+| Learning Curve | Moderate | Hard | Moderate | Moderate |
+| Microservices Support | Yes | No | No | Yes |
+| Built-in Security | Yes | Yes | No | Yes |
+
+---
+
+## **Spring Architecture**
+Spring Framework follows a layered architecture that consists of:
+1. **Spring Core** – Provides dependency injection (DI) features.
+2. **Spring AOP** – Implements aspect-oriented programming for modular code.
+3. **Spring JDBC & ORM** – Supports database interaction.
+4. **Spring MVC** – Provides a framework for web applications.
+5. **Spring Security** – Ensures authentication and authorization.
+6. **Spring Boot** – Simplifies Spring-based applications.
+
+---
+
+## **Spring Core Concepts**
+### **1. Dependency Injection (DI)**
+DI is a design pattern that reduces dependency between components by injecting dependencies at runtime.
+```java
+@Component
+public class Car {
+    private Engine engine;
+    
+    @Autowired
+    public Car(Engine engine) {
+        this.engine = engine;
+    }
+}
+```
+### **2. Aspect-Oriented Programming (AOP)**
+AOP helps in separating cross-cutting concerns such as logging and security.
+```java
+@Aspect
+@Component
+public class LoggingAspect {
+    @Before("execution(* com.example.service.*.*(..))")
+    public void logBefore(JoinPoint joinPoint) {
+        System.out.println("Executing: " + joinPoint.getSignature());
+    }
+}
+```
+
+---
+
+## **Spring Boot**
+Spring Boot is an extension of Spring that simplifies application development.
+### **Key Features:**
+- Embedded Tomcat, Jetty, or Undertow.
+- Auto-configuration.
+- Standalone applications.
+- Spring Boot starters (pre-configured dependencies).
+
+### **Creating a Spring Boot Application**
+```java
+@SpringBootApplication
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+```
+
+---
+
+## **Spring MVC**
+Spring MVC is a framework for building web applications following the Model-View-Controller pattern.
+### **Spring MVC Controller Example**
+```java
+@Controller
+public class HomeController {
+    @GetMapping("/")
+    public String home(Model model) {
+        model.addAttribute("message", "Welcome to Spring MVC");
+        return "home";
+    }
+}
+```
+
+---
+
+## **Spring Security**
+Spring Security provides authentication and authorization features.
+### **Spring Security Configuration**
+```java
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests().antMatchers("/").permitAll().anyRequest().authenticated()
+            .and().formLogin().loginPage("/login").permitAll();
+    }
+}
+```
+
+---
+
+## **Spring Data**
+Spring Data simplifies database interaction using JPA and Hibernate.
+### **Spring Data JPA Repository Example**
+```java
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
+    List<User> findByName(String name);
+}
+```
+
+---
+
+## **Spring Cloud**
+Spring Cloud provides tools for building microservices.
+### **Key Features:**
+- Service Discovery (Eureka)
+- API Gateway (Zuul, Spring Cloud Gateway)
+- Distributed Configuration (Spring Cloud Config)
+
+---
+
+## **Spring Framework Interview Questions**
+### **Basic Questions**
+1. What is Spring Framework?
+   - A lightweight framework for Java enterprise applications.
+2. What are the main modules of Spring Framework?
+   - Spring Core, Spring AOP, Spring MVC, Spring Boot, Spring Security, Spring Data.
+
+### **Intermediate Questions**
+3. What is dependency injection?
+   - It’s a design pattern that injects dependencies at runtime instead of hardcoding them.
+4. What is the difference between `@Component`, `@Service`, and `@Repository`?
+   - `@Component` is a generic annotation, `@Service` is for business logic, `@Repository` is for database operations.
+
+### **Advanced Questions**
+5. What is Spring Boot auto-configuration?
+   - A mechanism that automatically configures Spring application based on dependencies.
+6. How does Spring Security handle authentication?
+   - It uses `UserDetailsService` and `AuthenticationManager` to manage user credentials.
+
+---
+
+## **Conclusion**
+Spring Framework is a powerful tool for building scalable, secure, and enterprise-level Java applications. It supports microservices, cloud-based development, and seamless integration with various tools and technologies.
+
+This guide covers all fundamental and advanced concepts of Spring Framework, making it a one-stop resource for mastering Spring!
+

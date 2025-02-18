@@ -1,0 +1,104 @@
+**Node.js Documentation**
+
+### **Introduction to Node.js**
+
+Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside a web browser. It is primarily used for building scalable network applications. Node.js uses an event-driven, non-blocking I/O model, making it lightweight and efficient.
+
+### **History of Node.js**
+
+Node.js was created by **Ryan Dahl** in 2009. Before Node.js, JavaScript was mainly used for client-side scripting. Dahl introduced Node.js to enable JavaScript to run on the server-side, using Google Chrome’s **V8 JavaScript engine**. Since then, Node.js has gained immense popularity and is widely adopted by developers for various applications.
+
+### **Why is Node.js So Popular?**
+
+- **Asynchronous & Event-Driven:** Node.js operates on a non-blocking I/O model, allowing multiple operations to be executed concurrently.
+- **High Performance:** Uses Google Chrome’s V8 engine, which compiles JavaScript to native machine code, ensuring fast execution.
+- **Full-Stack Development:** Enables JavaScript developers to use a single language for both front-end and back-end development.
+- **Large Community & Ecosystem:** Node.js has a vast ecosystem with **npm (Node Package Manager)**, which provides thousands of reusable packages.
+- **Scalability:** Ideal for building scalable applications, especially for microservices and real-time applications.
+
+### **Why Use Node.js?**
+
+1. **Speed and Efficiency**: Thanks to its asynchronous and event-driven architecture.
+2. **Single Programming Language**: JavaScript can be used for both client-side and server-side development.
+3. **Microservices & Real-time Apps**: Node.js is widely used for real-time applications such as chat applications and streaming services.
+4. **Huge Community Support**: Constantly evolving with the support of developers worldwide.
+5. **Cross-Platform Development**: Allows the development of cross-platform applications with tools like Electron.js.
+
+### **Advantages of Node.js**
+
+- **Non-blocking Asynchronous Architecture**: Improves application performance.
+- **Large Package Ecosystem**: npm provides a vast collection of packages.
+- **Lightweight and Fast**: Runs on Google’s V8 engine, making it highly efficient.
+- **Highly Scalable**: Best suited for microservices and distributed systems.
+- **Easy to Learn**: JavaScript is already widely used, making it easier to adopt.
+
+### **Why is Node.js Preferred Over Other Technologies?**
+
+Node.js is often preferred over technologies like PHP, Python, Java, and Ruby due to its speed, scalability, and asynchronous nature. Here’s a comparison:
+
+| Feature           | Node.js              | PHP      | Python       | Java            | Ruby     |
+| ----------------- | -------------------- | -------- | ------------ | --------------- | -------- |
+| Performance       | High                 | Moderate | Moderate     | High            | Low      |
+| Scalability       | High                 | Low      | Moderate     | High            | Low      |
+| Asynchronous      | Yes (Non-blocking)   | No       | No           | Yes             | No       |
+| Language          | JavaScript           | PHP      | Python       | Java            | Ruby     |
+| Community Support | Large                | Large    | Large        | Large           | Medium   |
+| Use Case          | Real-time apps, APIs | Web apps | Data Science | Enterprise Apps | Web Apps |
+
+### **How Does Node.js Help Developers?**
+
+- **Faster Development**: Simplifies the development process by allowing JavaScript for both front-end and back-end.
+- **High Performance for Web Apps**: Handles multiple requests concurrently without blocking execution.
+- **Enables Real-time Applications**: Ideal for chat applications, gaming, and live streaming platforms.
+- **Easy Scalability**: Microservices architecture enables better scalability for enterprise applications.
+- **Extensive Libraries and Tools**: The npm registry offers pre-built modules to speed up development.
+
+### **30 Node.js Interview Questions (From Basic to Advanced)**
+
+#### **Basic Level**
+
+1. What is Node.js?
+2. What are the key features of Node.js?
+3. How does Node.js work?
+4. What is npm?
+5. What is the difference between Node.js and JavaScript?
+6. How do you install Node.js?
+7. What is the role of the package.json file in Node.js?
+8. What is a callback function in Node.js?
+9. What are modules in Node.js?
+10. What is the event loop in Node.js?
+
+#### **Intermediate Level**
+
+11. How does asynchronous programming work in Node.js?
+12. What are streams in Node.js?
+13. What is the purpose of the buffer class in Node.js?
+14. How does Node.js handle child processes?
+15. What is middleware in Node.js?
+16. What is Express.js, and why is it used?
+17. How do you handle errors in Node.js?
+18. What is the difference between process.nextTick() and setImmediate()?
+19. How do you read and write files using Node.js?
+20. What is the difference between synchronous and asynchronous functions?
+
+#### **Advanced Level**
+
+21. What are worker threads in Node.js?
+22. What is clustering in Node.js, and why is it useful?
+23. How do you secure a Node.js application?
+24. What are JWTs, and how do they work in Node.js?
+25. Explain the concept of microservices in Node.js.
+26. How do you handle memory leaks in Node.js applications?
+27. What is the difference between RESTful APIs and GraphQL in Node.js?
+28. How does Node.js handle concurrency?
+29. What is event-driven programming, and how is it used in Node.js?
+30. How do you optimize the performance of a Node.js application?
+
+### **Conclusion**
+
+Node.js is a powerful and widely used runtime environment that enables efficient and scalable development. It offers excellent performance, extensive libraries, and a vibrant community. Whether you’re building real-time applications, APIs, or microservices, Node.js remains one of the top choices for developers worldwide.
+
+---
+
+This documentation provides a detailed overview of Node.js, including its advantages, usage, comparisons, and interview questions to help developers understand and prepare for job interviews.
+
