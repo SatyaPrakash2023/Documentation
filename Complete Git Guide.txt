@@ -166,6 +166,10 @@ Fetches changes from the remote repository but does not merge them.
 git pull origin <branch-name>
 ```
 Fetches and merges changes from the remote branch.
+```bash
+git fetch --all --prune
+```
+Fetches all remote branches and removes deleted ones from the local list.
 
 ---
 
